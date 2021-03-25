@@ -1,0 +1,15 @@
+overwrite: true
+schema: "dist/apps/api/src/schema.gql"
+generates:
+  libs/users/data-access/generated/generated.ts:
+    documents: "libs/users/data-access/src/graphql/operations/*.graphql" # https://github.com/dotansimha/graphql-code-generator/issues/2979
+    plugins: # https://graphql-code-generator.com/docs/plugins
+      - "typescript"
+      - "typescript-resolvers"
+      - "typescript-operations"
+      - "typescript-apollo-angular"
+    config:
+      preResolveTypes: true
+      enumsAsTypes: true
+      futureProofEnums: true
+      skipTypename: true
