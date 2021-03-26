@@ -1,0 +1,14 @@
+{
+  "cli": "nx",
+  "properties": {
+    "config": {
+      "type": "string",
+      "description": "Path to the codegen.yml"
+    },
+    "watch": {
+      "type": "boolean",
+      "description": "Watch schema for changes and regenerate code"
+    }
+  },
+  "additionalProperties": false
+}

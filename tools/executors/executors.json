@@ -1,0 +1,8 @@
+{
+  "executors": {
+    "codegen": {
+      "schema": "codegen/schema.json",
+      "implementation": "../../dist/out-tsc/tools/executors/codegen/codegen.impl"
+    }
+  }
+}
