@@ -7,16 +7,17 @@ dependencies:
   '@angular/platform-browser': 11.2.7_c3368fe88cb13d035903ec0b47d8584b
   '@angular/platform-browser-dynamic': 11.2.7_7e01348d1871971d27e9316e68c6764a
   '@angular/router': 11.2.7_437e59ff32d3868ae796dbdf2239dff7
+  '@apollo/client': 3.3.13_graphql@15.5.0
   '@nestjs/common': 7.6.15_1b0114c18e741c9e7837aac5d4abbde8
   '@nestjs/core': 7.6.15_addc498901482b108c9689926fe42327
   '@nestjs/graphql': 7.10.3_b187ecf9f59fa58d231c0f6c59353c06
   '@nestjs/platform-express': 7.6.15_a5e284bf185e3b13e505d42d771fb371
   '@nestjs/typeorm': 7.1.5_5132052c488a3330b1ba44e2060552df
   '@nrwl/angular': 11.5.2_f82fa02051490fcb1a1d3225325c7146
-  apollo-angular: 2.4.0_e480abba87d9a95970eada0521569e1c
+  apollo-angular: 2.4.0_9ed58cc2c4561a70bdd331c836781152
   apollo-server-express: 2.21.2_graphql@15.5.0
   graphql: 15.5.0
-  graphql-tools: 7.0.4_graphql@15.5.0
+  graphql-tools: 7.0.4_8fa3e06c149343e3447dfa162a443ba3
   mongodb: 3.6.5
   reflect-metadata: 0.1.13
   rxjs: 6.6.6
@@ -25,6 +26,9 @@ dependencies:
   zone.js: 0.10.3
 devDependencies:
   '@angular-devkit/build-angular': 0.1102.6_613bc9a8aa119ba24184779d945651d9
+  '@angular-eslint/eslint-plugin': 1.0.0_eslint@7.10.0+typescript@4.0.7
+  '@angular-eslint/eslint-plugin-template': 1.0.0_e16362e47bb9cf89c1b7c7b9b0269baa
+  '@angular-eslint/template-parser': 1.0.0_751d8cc0e39ea84a3d2a6953900adca4
   '@angular/compiler-cli': 11.2.7_1128ce779893ddc2de23d8f4bd19e66b
   '@angular/language-service': 11.2.7
   '@graphql-codegen/cli': 1.21.3_graphql@15.5.0+typescript@4.0.7
@@ -280,6 +284,48 @@ packages:
       yarn: '>= 1.13.0'
     resolution:
       integrity: sha512-bhi2+5xtVAjtr3bsXKT8pnoBamQrArd/Y20ueA4Od7cd38YT97nzTA1wyHBFG0vWd0HMyg42ZS0aycNBuOebaA==
+  /@angular-eslint/eslint-plugin-template/1.0.0_e16362e47bb9cf89c1b7c7b9b0269baa:
+    dependencies:
+      '@angular-eslint/template-parser': 1.0.0_751d8cc0e39ea84a3d2a6953900adca4
+      '@typescript-eslint/experimental-utils': 4.3.0_eslint@7.10.0+typescript@4.0.7
+      aria-query: 4.2.2
+      axobject-query: 2.2.0
+      eslint: 7.10.0
+      typescript: 4.0.7
+    dev: true
+    peerDependencies:
+      '@angular-eslint/template-parser': '*'
+      eslint: '*'
+      typescript: '*'
+    resolution:
+      integrity: sha512-+LrAypsGUaW98aoDb/ITWWDKYHYp6UcJraJU7/bih7AQOJyDs6AnpbMPLscTcxkcCP2ylmJ31pEzYz4ItNKRTQ==
+  /@angular-eslint/eslint-plugin/1.0.0_eslint@7.10.0+typescript@4.0.7:
+    dependencies:
+      '@typescript-eslint/experimental-utils': 4.3.0_eslint@7.10.0+typescript@4.0.7
+      eslint: 7.10.0
+      typescript: 4.0.7
+    dev: true
+    peerDependencies:
+      eslint: '*'
+      eslint-plugin-import: '*'
+      eslint-plugin-jsdoc: '*'
+      eslint-plugin-prefer-arrow: '*'
+      typescript: '*'
+    resolution:
+      integrity: sha512-oar+5WhqFMVrK8ywTAJAnnisIQyG6I2STHHwVURx4rPyzjk3pZN10c3KgJuOF5FExfO2bewwr8FBy1CEZsh90w==
+  /@angular-eslint/template-parser/1.0.0_751d8cc0e39ea84a3d2a6953900adca4:
+    dependencies:
+      '@angular/compiler': 11.2.7
+      eslint: 7.10.0
+      eslint-scope: 5.1.1
+      typescript: 4.0.7
+    dev: true
+    peerDependencies:
+      '@angular/compiler': '*'
+      eslint: '*'
+      typescript: '*'
+    resolution:
+      integrity: sha512-M7rj907yOoEzq10FO5BDX7Ylw24V+YfdsYfyEi/TzzQtNGxCwQhbEwXc1PAZgsQ+P1wbGFbg9mb3yFkps7/LEA==
   /@angular/animations/11.2.7_@angular+core@11.2.7:
     dependencies:
       '@angular/core': 11.2.7_rxjs@6.6.6+zone.js@0.10.3
@@ -2195,6 +2241,13 @@ packages:
       '@babel/core': ^7.0.0-0
     resolution:
       integrity: sha512-J36NhwnfdzpmH41M1DrnkkgAqhZaqr/NBdPfQ677mLzlaXo+oDiv1deyCDtgAhz8p328otdob0Du7+xgHGZbKg==
+  /@babel/runtime-corejs3/7.13.10:
+    dependencies:
+      core-js-pure: 3.9.1
+      regenerator-runtime: 0.13.7
+    dev: true
+    resolution:
+      integrity: sha512-x/XYVQ1h684pp1mJwOV4CyvqZXqbc8CMsMGUnAbuc82ZCdv1U63w5RSUzgDSXQHG5Rps/kiksH6g2D5BuaKyXg==
   /@babel/runtime/7.12.5:
     dependencies:
       regenerator-runtime: 0.13.7
@@ -2647,8 +2700,9 @@ packages:
       graphql: ^14.0.0 || ^15.0.0
     resolution:
       integrity: sha512-CnfwBSY5926zyb6fkDBHnlTblHnHI4hoBALFYXnrg0Ev4yWU8B04DZl/pBRUc459VNgO2x8/mxGIZj2hPJG1EA==
-  /@graphql-tools/links/7.1.0_graphql@15.5.0:
+  /@graphql-tools/links/7.1.0_8fa3e06c149343e3447dfa162a443ba3:
     dependencies:
+      '@apollo/client': 3.3.13_graphql@15.5.0
       '@graphql-tools/delegate': 7.1.1_graphql@15.5.0
       '@graphql-tools/utils': 7.7.1_graphql@15.5.0
       apollo-upload-client: 14.1.3_graphql@15.5.0
@@ -4615,9 +4669,10 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-mM8522psRCqzV+6LhomX5wgp25YVibjh8Wj23I5RPkPppSVSjyKD2A2mBJmWGa+KN7f2D6LNh9jkBCeyLktzjg==
-  /apollo-angular/2.4.0_e480abba87d9a95970eada0521569e1c:
+  /apollo-angular/2.4.0_9ed58cc2c4561a70bdd331c836781152:
     dependencies:
       '@angular/core': 11.2.7_rxjs@6.6.6+zone.js@0.10.3
+      '@apollo/client': 3.3.13_graphql@15.5.0
       extract-files: 9.0.0
       graphql: 15.5.0
       rxjs: 6.6.6
@@ -4888,6 +4943,15 @@ packages:
     dev: true
     resolution:
       integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
+  /aria-query/4.2.2:
+    dependencies:
+      '@babel/runtime': 7.13.10
+      '@babel/runtime-corejs3': 7.13.10
+    dev: true
+    engines:
+      node: '>=6.0'
+    resolution:
+      integrity: sha512-o/HelwhuKpTj/frsOsbNLNgnNGVIFsVP/SW2BSF14gVl7kAfMOJ6/8wUAUvG1R1NHKrfG+2sHZTu0yauT1qBrA==
   /arity-n/1.0.4:
     dev: true
     resolution:
@@ -5068,6 +5132,10 @@ packages:
       follow-redirects: 1.13.3
     resolution:
       integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
+  /axobject-query/2.2.0:
+    dev: true
+    resolution:
+      integrity: sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA==
   /babel-code-frame/6.26.0:
     dependencies:
       chalk: 1.1.3
@@ -6330,6 +6398,11 @@ packages:
       semver: 7.0.0
     resolution:
       integrity: sha512-jXAirMQxrkbiiLsCx9bQPJFA6llDadKMpYrBJQJ3/c4/vsPP/fAf29h24tviRlvwUL6AmY5CHLu2GvjuYviQqA==
+  /core-js-pure/3.9.1:
+    dev: true
+    requiresBuild: true
+    resolution:
+      integrity: sha512-laz3Zx0avrw9a4QEIdmIblnVuJz8W51leY9iLThatCsFawWxC3sE4guASC78JbCin+DkwMpCdp1AVAuzL/GN7A==
   /core-js/3.8.3:
     dev: true
     requiresBuild: true
@@ -8439,7 +8512,7 @@ packages:
       graphql: ^0.13.0 || ^14.0.0 || ^15.0.0
     resolution:
       integrity: sha512-MW+ioleBrwhRjalKjYaLQbr+920pHBgy9vM/n47sswtns8+96sRn5M/G+J1eu7IMeKWiN/9p6tmwCHU7552VJg==
-  /graphql-tools/7.0.4_graphql@15.5.0:
+  /graphql-tools/7.0.4_8fa3e06c149343e3447dfa162a443ba3:
     dependencies:
       '@graphql-tools/batch-delegate': 7.0.2_graphql@15.5.0
       '@graphql-tools/batch-execute': 7.1.0_graphql@15.5.0
@@ -8451,7 +8524,7 @@ packages:
       '@graphql-tools/graphql-tag-pluck': 6.5.1_graphql@15.5.0
       '@graphql-tools/import': 6.3.0_graphql@15.5.0
       '@graphql-tools/json-file-loader': 6.2.6_graphql@15.5.0
-      '@graphql-tools/links': 7.1.0_graphql@15.5.0
+      '@graphql-tools/links': 7.1.0_8fa3e06c149343e3447dfa162a443ba3
       '@graphql-tools/load': 6.2.7_graphql@15.5.0
       '@graphql-tools/load-files': 6.3.1_graphql@15.5.0
       '@graphql-tools/merge': 6.2.11_graphql@15.5.0
@@ -8469,6 +8542,7 @@ packages:
       tslib: 2.1.0
     dev: false
     peerDependencies:
+      '@apollo/client': '*'
       graphql: ^14.0.0 || ^15.0.0
     resolution:
       integrity: sha512-9tEqKSAprMQMCB8WzwQKudzTVl6a3nANR4rLL9VJbgGn+ULjZTxeW0lMA8gKfds5Cu4EtD/Esc8QRbEf3seY6g==
@@ -15516,6 +15590,9 @@ packages:
       integrity: sha512-LXVLVEq0NNOqK/fLJo3d0kfzd4sxwn2/h67/02pjCjfKDxgx1i9QqpvtHD8CrBnSSwMw5+dy11O7FRX5mkO7Cg==
 specifiers:
   '@angular-devkit/build-angular': ~0.1102.0
+  '@angular-eslint/eslint-plugin': ~1.0.0
+  '@angular-eslint/eslint-plugin-template': ~1.0.0
+  '@angular-eslint/template-parser': ~1.0.0
   '@angular/animations': ^11.2.0
   '@angular/common': ^11.2.0
   '@angular/compiler': ^11.2.0
@@ -15526,6 +15603,7 @@ specifiers:
   '@angular/platform-browser': ^11.2.0
   '@angular/platform-browser-dynamic': ^11.2.0
   '@angular/router': ^11.2.0
+  '@apollo/client': ^3.3.13
   '@graphql-codegen/cli': ^1.20.0
   '@graphql-codegen/typescript': ^1.20.0
   '@graphql-codegen/typescript-apollo-angular': ^2.2.1

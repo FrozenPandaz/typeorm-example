@@ -9,14 +9,14 @@ import { UsersUsersModule } from '@typeorm-test/users/users';
 @Module({
   imports: [
     GraphQLModule.forRoot({
-      autoSchemaFile: join(__dirname, '../../apps/api','src/schema.gql'),
+      autoSchemaFile: join(__dirname, '../../../apps/api', 'schema.gql'),
     }),
     TypeOrmModule.forRoot({
       type: 'mongodb',
       host: 'localhost',
       port: 4444,
     }),
-    UsersUsersModule
+    UsersUsersModule,
   ],
   providers: [],
 })

@@ -16,10 +16,16 @@
     }
   },
   "projects": {
-    "api": { "tags": [] },
-    "users-users": { "tags": [] },
-    "users-data-access": { "tags": [] },
-    "frontend": { "tags": [] },
-    "frontend-e2e": { "tags": [], "implicitDependencies": ["frontend"] }
+    "api": { "tags": ["platform:node", "type:app", "scope:api"] },
+    "users-users": { "tags": ["platform:node", "type:"] },
+    "users-data-access": {
+      "tags": ["platform:web", "scope:users", "type:data-access"],
+      "implicitDependencies": ["users-users"]
+    },
+    "frontend": { "tags": ["platform:web"] },
+    "frontend-e2e": { "tags": [], "implicitDependencies": ["frontend"] },
+    "users-user-profile-page": {
+      "tags": ["platform:web", "scope:users", "type:feature"]
+    }
   }
 }

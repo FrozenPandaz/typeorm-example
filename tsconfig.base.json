@@ -10,13 +10,18 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": ["esnext", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@typeorm-test/users/users": ["libs/users/users/src/index.ts"],
-      "@typeorm-test/users/data-access": ["libs/users/data-access/src/index.ts"]
+      "@typeorm-test/users/data-access": [
+        "libs/users/data-access/src/index.ts"
+      ],
+      "@typeorm-test/users/user-profile-page": [
+        "libs/users/user-profile-page/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
