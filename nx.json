@@ -18,6 +18,8 @@
   "projects": {
     "api": { "tags": [] },
     "users-users": { "tags": [] },
-    "users-data-access": { "tags": [] }
+    "users-data-access": { "tags": [] },
+    "frontend": { "tags": [] },
+    "frontend-e2e": { "tags": [], "implicitDependencies": ["frontend"] }
   }
 }
