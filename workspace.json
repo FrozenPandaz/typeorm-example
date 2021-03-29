@@ -1,8 +1,6 @@
 {
   "version": 2,
-  "cli": {
-    "defaultCollection": "@nrwl/nest"
-  },
+  "cli": { "defaultCollection": "@nrwl/nest" },
   "defaultProject": "api",
   "projects": {
     "api": {
@@ -36,42 +34,17 @@
         },
         "serve": {
           "executor": "@nrwl/node:execute",
-          "options": {
-            "buildTarget": "api:build"
-          }
+          "options": { "buildTarget": "api:build" }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/api/**/*.ts"]
-          }
+          "options": { "lintFilePatterns": ["apps/api/**/*.ts"] }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/api"],
           "options": {
             "jestConfig": "apps/api/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "users-users": {
-      "root": "libs/users/users",
-      "sourceRoot": "libs/users/users/src",
-      "projectType": "library",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/users/users/**/*.ts"]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/users/users"],
-          "options": {
-            "jestConfig": "libs/users/users/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -84,9 +57,7 @@
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/users/data-access/**/*.ts"]
-          }
+          "options": { "lintFilePatterns": ["libs/users/data-access/**/*.ts"] }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
@@ -98,9 +69,7 @@
         },
         "codegen": {
           "executor": ".:codegen",
-          "options": {
-            "config": "libs/users/data-access/codegen.yml"
-          }
+          "options": { "config": "libs/users/data-access/codegen.yml" }
         }
       }
     },
@@ -163,16 +132,12 @@
             "proxyConfig": "apps/frontend/proxy.conf.json"
           },
           "configurations": {
-            "production": {
-              "browserTarget": "frontend:build:production"
-            }
+            "production": { "browserTarget": "frontend:build:production" }
           }
         },
         "extract-i18n": {
           "executor": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "frontend:build"
-          }
+          "options": { "browserTarget": "frontend:build" }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -206,16 +171,12 @@
             "devServerTarget": "frontend:serve"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "frontend:serve:production"
-            }
+            "production": { "devServerTarget": "frontend:serve:production" }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/frontend-e2e/**/*.{js,ts}"]
-          }
+          "options": { "lintFilePatterns": ["apps/frontend-e2e/**/*.{js,ts}"] }
         }
       }
     },
@@ -243,6 +204,50 @@
           }
         }
       }
+    },
+    "users-entities": {
+      "root": "libs/users/entities",
+      "sourceRoot": "libs/users/entities/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/users/entities/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/users/entities"],
+          "options": {
+            "jestConfig": "libs/users/entities/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "users-ui": {
+      "projectType": "library",
+      "root": "libs/users/ui",
+      "sourceRoot": "libs/users/ui/src",
+      "prefix": "typeorm-test",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/users/ui/src/**/*.ts",
+              "libs/users/ui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/users/ui"],
+          "options": {
+            "jestConfig": "libs/users/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "generators": {
@@ -257,8 +262,6 @@
       "linter": "eslint",
       "unitTestRunner": "jest"
     },
-    "@nrwl/angular:component": {
-      "style": "css"
-    }
+    "@nrwl/angular:component": { "style": "css" }
   }
 }

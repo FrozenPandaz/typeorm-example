@@ -12,6 +12,7 @@ dependencies:
   '@nestjs/core': 7.6.15_addc498901482b108c9689926fe42327
   '@nestjs/graphql': 7.10.3_b187ecf9f59fa58d231c0f6c59353c06
   '@nestjs/platform-express': 7.6.15_a5e284bf185e3b13e505d42d771fb371
+  '@nestjs/schedule': 0.4.3_a4eba26968d72bf015d9bf44e71ae9b6
   '@nestjs/typeorm': 7.1.5_5132052c488a3330b1ba44e2060552df
   '@nrwl/angular': 11.5.2_f82fa02051490fcb1a1d3225325c7146
   apollo-angular: 2.4.0_9ed58cc2c4561a70bdd331c836781152
@@ -3287,6 +3288,18 @@ packages:
       '@nestjs/core': ^7.0.0
     resolution:
       integrity: sha512-XpoHtai7UlUvm6rLo0u2xtkABhC6YbxNuNYqpv/L+mT1xzKJtPV2jWYxJnsE4WNZAddsnKsAcDjj2nCQgiJ52Q==
+  /@nestjs/schedule/0.4.3_a4eba26968d72bf015d9bf44e71ae9b6:
+    dependencies:
+      '@nestjs/common': 7.6.15_1b0114c18e741c9e7837aac5d4abbde8
+      cron: 1.7.2
+      reflect-metadata: 0.1.13
+      uuid: 8.3.2
+    dev: false
+    peerDependencies:
+      '@nestjs/common': ^6.10.11 || ^7.0.0
+      reflect-metadata: ^0.1.12
+    resolution:
+      integrity: sha512-EowkpwD09lrdMFzjt/kNQgaq6MG0GrNadNoOEebbfyA0qBU0UTg7J+FVullTR9+5HtaegqqAuWDvZlVoGHYz+Q==
   /@nestjs/schematics/7.3.0_typescript@4.0.7:
     dependencies:
       '@angular-devkit/core': 11.2.3
@@ -6536,6 +6549,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-qUF2SaAWFYjNPdCcPpu68p2DnHiosia84yx5mPTlUMQjkjChR+n6sO1/I7yn2U2qNDgSPTd2SoaTIDQcUL+EwQ==
+  /cron/1.7.2:
+    dependencies:
+      moment-timezone: 0.5.33
+    dev: false
+    resolution:
+      integrity: sha512-+SaJ2OfeRvfQqwXQ2kgr0Y5pzBR/lijf5OpnnaruwWnmI799JfWr2jN2ItOV9s3A/+TFOt6mxvKzQq5F0Jp6VQ==
   /cross-fetch/3.0.6:
     dependencies:
       node-fetch: 2.6.1
@@ -11020,8 +11039,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
+  /moment-timezone/0.5.33:
+    dependencies:
+      moment: 2.29.1
+    dev: false
+    resolution:
+      integrity: sha512-PTc2vcT8K9J5/9rDEPe5czSIKgLoGsH8UNpA4qZTVw0Vd/Uz19geE9abbIOQKaAQFcnQ3v5YEXrbSc5BpshH+w==
   /moment/2.29.1:
-    dev: true
     resolution:
       integrity: sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
   /mongodb/3.6.5:
@@ -15650,6 +15674,7 @@ specifiers:
   '@nestjs/core': ^7.0.0
   '@nestjs/graphql': ^7.10.3
   '@nestjs/platform-express': ^7.0.0
+  '@nestjs/schedule': ^0.4.3
   '@nestjs/schematics': ^7.0.0
   '@nestjs/testing': ^7.0.0
   '@nestjs/typeorm': ^7.1.5

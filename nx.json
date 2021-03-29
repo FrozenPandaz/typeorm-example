@@ -17,15 +17,18 @@
   },
   "projects": {
     "api": { "tags": ["platform:node", "type:app", "scope:api"] },
-    "users-users": { "tags": ["platform:node", "type:"] },
     "users-data-access": {
       "tags": ["platform:web", "scope:users", "type:data-access"],
-      "implicitDependencies": ["users-users"]
+      "implicitDependencies": ["users-entities"]
     },
     "frontend": { "tags": ["platform:web"] },
     "frontend-e2e": { "tags": [], "implicitDependencies": ["frontend"] },
     "users-user-profile-page": {
       "tags": ["platform:web", "scope:users", "type:feature"]
-    }
+    },
+    "users-entities": {
+      "tags": ["platform:node", "type:entities", "scope:users"]
+    },
+    "users-ui": { "tags": [] }
   }
 }

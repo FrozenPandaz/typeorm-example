@@ -5,5 +5,6 @@ module.exports = {
     '<rootDir>/libs/users/data-access',
     '<rootDir>/apps/frontend',
     '<rootDir>/libs/users/user-profile-page',
+    '<rootDir>/libs/users/ui',
   ],
 };

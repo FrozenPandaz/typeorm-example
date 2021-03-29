@@ -15,13 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@typeorm-test/users/users": ["libs/users/users/src/index.ts"],
       "@typeorm-test/users/data-access": [
         "libs/users/data-access/src/index.ts"
       ],
       "@typeorm-test/users/user-profile-page": [
         "libs/users/user-profile-page/src/index.ts"
-      ]
+      ],
+      "@typeorm-test/users/entities": ["libs/users/entities/src/index.ts"],
+      "@typeorm-test/users/ui": ["libs/users/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -4,7 +4,7 @@ import { join } from 'path';
 
 import { GraphQLModule } from '@nestjs/graphql';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { UsersUsersModule } from '@typeorm-test/users/users';
+import { UsersUsersModule } from '@typeorm-test/users/entities';
 
 @Module({
   imports: [
